@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+		<head>	
+			<meta charset="utf-8">
+  			<title>Sauvez Internetus</title>
+  			<link rel="stylesheet" type="text/css" href="../style/reset.css">
+  			<link rel="stylesheet" type="text/css" href="../style/styleintro.css">
+  			<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+  			<link rel="icon" type="image/png" href="../images/favicon.png" />
+
+  			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+						var page = $(this).attr('href'); // Page cible
+						var speed = 750; // Durée de l'animation (en ms)
+						$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+						return false;
+					});
+				});
+			</script>
+		</head>
+
+
+		<body id="finish">
+
+			<!-- Flèches-->
+				<a class="js-scrollTo" href="#conteneur">
+				  <div id= "scrolldown">
+				  	<img src="../images/arrow.png" width="50px">
+				  </div>
+				</a>
+
+			<div class="carre">
+			</div>
+
+			<div class="text">
+	 			<h1 class="fin"><b>WOOW !</b></h1>
+
+		 		<div class="titre">
+		 			<br>
+		 			<h3 class="fin">Tu viens de sauver la planète Internetus, grâce <br>à ton aide, les différentes communautés pourront<br> désormais vivre sur cette planète en paix et en sûreté,<br> et pourront développer leur système intitulé<br><b> “ Internet ” !</b></h3>
+		 		</div>
+	 		</div>
+
+	 			<!--PAGE DU DESSOUS POUR REJOUER-->
+
+				<div id="fondrejouer"></div>
+				
+			<div id="conteneur">
+				<div id="iconrejouer">
+					<a href="../index.html" class="parcours" title="Retour page Accueil">
+		 				<img src="../images/rejoueranime.gif">
+		 			</a>
+		 		</div>
+
+
+		 		<div id="liensparcours">
+		 			<a href="../scroll/parcours1.html" class="parcours" title="Rejouer parcours 1">
+		 				<img src="../images/bulle1_rejouer.png" width="200px" alt="Lien retour vers le parcours 1"></a>
+		 			
+		 			<a href="../scroll/parcours2.html" class="parcours" title="Rejouer parcours 2">
+		 			<img src="../images/bulle2_rejouer.png" width="200px" alt="Lien retour vers le parcours 2"></a>
+
+		 			<a href="../scroll/parcours3.html" class="parcours" title="Rejouer parcours 3">
+		 			<img src="../images/bulle3_rejouer.png" width="200px" alt="Lien retour vers le parcours 3"></a>
+				</div>
+
+			</div>
+
+			<div id="conteneurinfos">
+				<a href="https://www.instagram.com/jaisixmots/" class="parcours" alt="lien insta" target="=_blank">
+					<p class="infos">@jaisixmots</p>
+				</a>
+				<p class="infos2">Jessy Moreira - 2019</p>
+				<img src="../images/logoinsta.png" width="20px" alt="Réseau Instagram" class="logoinsta"><!--Icon made by Pixel Perfect from https://www.flaticon.com/free-icon/instagram_733614--->
+			</div>
+			
+		</body>
+
+
+</html>

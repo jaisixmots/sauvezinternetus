@@ -1,0 +1,142 @@
+/*Page introductives*/
+#pageintro{
+	background-color: #ffd833;
+}
+
+/* Conteneur contenant les textes introductifs*/
+#conteneur{
+	width: 1200px;
+	margin: 200px auto 0px;
+	border: 2px solid transparent;
+	height: 700px;
+}
+
+/*Logo animé au tout début - Index*/
+#logo{
+	width: 500px;
+	margin: 200px auto 50px;
+}
+
+/*		MY  NAME 	*/
+
+footer{
+	position: absolute;
+	bottom: 2em;
+	right: 3em;
+	font-family: 'Poppins', sans-serif;
+
+	color: black;
+	font-size: 0.7em;
+	z-index: 6;
+	opacity: 1;
+}
+
+/*Bouton Jouer accès vers la page suivante*/
+#iconejouer{
+	display: block;
+	width: 316px;
+	margin: 50px auto 20px;
+}
+
+#bouton{
+	width: 150px;
+	margin-left: 79px;
+	transform: scale(1,1);
+	filter: opacity(100%);
+}
+
+#bouton:hover{
+	transform: scale(1.2,1.2);
+	filter: opacity(70%);
+	transition: all ease 1s;
+
+}
+
+/*Apparition de l'icône Jouer*/
+@keyframes transition {
+0%   { opacity:0; }
+100% { opacity:1; }
+}
+
+#bouton {opacity:0;animation: transition 1s ease-in-out 4s forwards;}
+
+p{
+	width: 800px;
+	margin: 200px auto 90px;
+	font-size: 1.3em;
+
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	font-size: 1em;
+	line-height: 1.4em;
+	
+}
+
+/*Mots en bold*/
+b{
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+/*Image flèche*/
+#suivant img{
+	width: 30px;
+}
+
+/*Icone suivant*/
+#suivant{
+	height: 50px;
+	margin-top: 90px;
+	margin-left: 970px;
+	opacity: 1;
+}
+
+#suivant:hover{
+	transition: 1s all ease;
+	opacity: 0.5;
+}
+
+
+/*Clique pour sauver Internetus !*/
+h4{
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	margin-top: -20px;
+	font-weight: 600;
+
+}
+
+h1{
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	margin-top: -20px;
+	font-weight: 600;
+
+}
+
+#boutongo{
+	display: block;
+	width: 316px;
+	margin: 50px auto 20px;
+}
+
+/*Image bouton Allez goo !*/
+#allezgo{
+	width: 158px;
+	margin-left: 79px;
+	transform: scale(1,1);
+	filter: opacity(100%);
+	-webkit-filter: opacity(100%);
+}
+
+#allezgo:hover{
+	transform: scale(1.1,1.02);
+	filter: opacity(70%);
+	transition: all ease 1s;
+
+}

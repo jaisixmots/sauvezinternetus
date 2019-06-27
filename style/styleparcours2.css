@@ -1,0 +1,499 @@
+html {
+    overflow: scroll;
+    overflow-y: hidden;
+	-webkit-animation: fadein 4s;/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s; /* Firefox < 16 */
+    animation: fadein 2s;
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  0% { opacity: 0; background-color: #ffd833}
+  100%{opacity: 1;}
+  
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    0% { opacity: 0; background-color: #ffd833}
+    100%   { opacity: 0.7; }
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+
+
+#parcours2{
+	width: 24694px;
+	height: 1080px;
+	border: 2px solid transparent;
+	margin: auto;
+	z-index: 1;
+	
+}
+/* Petit personnage*/
+#utilisateur{
+	width: 75px;
+	position: fixed;
+	left: 10em;
+	top: 47em;
+	z-index: 6;
+}
+
+/*Bulle qui rappelle le niveau - lien vers la page d'avant*/
+#bulleparcours{
+	position: fixed;
+	top: 2em;
+	left: 2em;
+}
+
+#bulleparcours img{
+	width: 140px;
+}
+
+#bulleparcours a{
+	opacity: 1;
+}
+
+#bulleparcours a:hover{
+	opacity: 0.6;
+	transition: 0.7s all ease;
+}
+
+
+/*			SECTIONS QUI ACTIVENT LE DIALOGUE EN CLIQUANT DESSUS		!!!*/
+.click{
+	position: absolute;
+	top: 41em;
+	z-index: 4;
+	border: 2px solid transparent;
+	left: 370em;
+	width: 400px;
+	height: 250px;
+}
+
+.click2{
+	position: absolute;
+	top: 40em;
+	z-index: 4;
+	border: 2px solid transparent;
+	left: 1025em;
+	width: 400px;
+	height: 250px;
+}
+/* HIPPIE*/
+.clickhp{
+	position: absolute;
+	top: 35em;
+	z-index: 4;
+	border: 2px solid transparent;
+	left: 1468em;
+	width: 495px;
+	height: 250px;
+}
+
+
+
+/*	INTRODUCTIONS	!!!*/
+.intro{
+	position: absolute;
+	top: 7em;
+	left: 5em;
+	font-family: 'Poppins', sans-serif;
+	z-index: 3;
+	font-size: 2em;
+	line-height: 1.5em;
+
+	opacity: 0;
+
+	white-space:nowrap;
+	overflow: hidden;
+
+	-webkit-animation: debutdeux 1s steps(50, end);
+	-moz-animation: debutdeux 1s steps(50, end);
+	animation: debutdeux 1s ease-in-out 2.5s forwards;
+}
+
+/* ANIMATION FAISANT APPARAITRE LE TEXTE*/
+@-webkit-keyframes debutdeux{
+0% {opacity: 0;}
+100% {opacity: 1};
+}
+
+@-moz-keyframes debutdeux{
+0% {opacity: 0;}
+100% {opacity: 1};
+}
+
+
+
+/*	MONOLOGUES	!!!*/
+.mono{
+	position: absolute;
+	top: 30em;
+	left: 170em;
+	width: 300px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 4;
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+.mono1{
+	position: absolute;
+	top: 30em;
+	left: 350em;
+	width: 220px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 4;
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+.mono2{
+	position: absolute;
+	top: 30em;
+	left: 600em;
+	width: 220px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 6;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	background-color: rgba(252,252,252,0.85);
+}
+
+.mono3{
+	position: absolute;
+	top: 27em;
+	left: 810em;
+	width: 220px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 6;
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+
+/*	DEBUTS DIALOGUES !!!*/
+
+/* Cache décor qui ne fonctionne pas, volonté de faire cacher une
+partie du décor en cliquant sur un personnage avec le javascript*/
+.carre{
+	position: absolute;
+	top: 10em;
+	left: 439em;
+	width: 246em;
+	height: 48em;
+	background-color: white;
+	opacity: 1;
+
+	white-space:nowrap;
+	overflow: hidden;
+
+	-webkit-animation: carrecache 1s steps(50, end);
+	-moz-animation: carrecache 1s steps(50, end);
+	animation: carrecache 1s ease-in-out 6s forwards;
+}
+@-webkit-keyframes carrecache{
+0% { opacity: 1;}
+100%{ opacity: 0;}
+}
+
+@-moz-keyframes carrecache{
+0% { opacity: 1;}
+100%{ opacity: 0;}
+}
+
+
+#dialogue1{/* Conteneur des textes*/
+	position: absolute;
+	top: 13em;
+	z-index: 4;
+	left: 370em;
+	width: 400px;
+	height: 430px;
+	display: none;
+}
+
+.inconnu, .inconnu2, .inconnu3, .inconnu4, .inconnu5, .inconnu6, .inconnu7
+.perso1, .perso1-2, .perso1-3, .perso1-4, .perso1-5, .perso1-6, .perso1-7{
+	position: absolute;
+	font-family: 'Poppins', sans-serif;
+	z-index: 4;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	white-space:nowrap;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.inconnu{
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 1s ease-in-out 1s forwards;
+}
+
+.perso1-2{
+	top: 3em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 2s ease-in-out 2s forwards;
+}
+
+.inconnu2{
+	top: 6em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 2s ease-in-out 5s forwards;
+}
+
+.perso1-3{
+	top: 9em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 1s ease-in-out 6.5s forwards;
+}
+
+.inconnu3{
+	top: 12em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 2s ease-in-out 8s forwards;
+}
+
+.perso1-4{
+	top: 15em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 2s ease-in-out 9.5s forwards;
+}
+
+.inconnu4{
+	top: 18em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 2s ease-in-out 12s forwards;
+}
+
+.inconnu5{
+	top: 23.5em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 2s ease-in-out 15s forwards;
+}
+
+
+.perso1-5{
+	top: 27.5em;
+	-webkit-animation: dialogue 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialogue 5s steps(60, end);
+	animation: dialogue 3s ease-in-out 17s forwards;
+}
+
+@-webkit-keyframes dialogue {
+0% { width: 0; opacity:0; }
+30% { opacity:1; }
+100%{ width:400px; opacity: 1;}
+}
+
+@-moz-keyframes dialogue {
+0% { width: 0; opacity:0; }
+30% { opacity:1; }
+100%{ width:400px; opacity: 1;}
+}
+
+
+
+/*PROCHAINS DIALOGUES !!!*/
+#dialogue2{/* Conteneur des textes*/
+	position: absolute;
+	top: 11em;
+	z-index: 4;
+	left: 1025em;
+	width: 450px;
+	height: 410px;
+	display: none;
+}
+
+.perso2, .hippies, .perso2-1, .hippies2, .perso2-2, .hippies3, .perso2-3, .hippies4,
+.perso2-4, .hippies5, .perso2-5 {
+	position: absolute;
+	width: 450px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 4;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	white-space:nowrap;
+	overflow: hidden;
+	opacity: 0;
+
+	background-color: rgba(252,252,252,0.7);
+}
+
+.perso2{
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1.5s ease-in-out 1s forwards;
+}
+
+.hippies{
+	top: 3em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1s ease-in-out 3s forwards;
+}
+
+.perso2-1{
+	top: 6em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 2s ease-in-out 5s forwards;
+}
+
+.hippies2{
+	top: 11em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 2s ease-in-out 9s forwards;
+}
+.perso2-2{
+	top: 17em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1s ease-in-out 14s forwards;
+}
+
+.hippies4{
+	top: 20em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 2s ease-in-out 16s forwards;
+}
+.perso2-4{
+	top: 27em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 2s ease-in-out 20s forwards;
+}
+
+@-webkit-keyframes dialoguee {
+0% { width: 0; opacity:0; }
+30% { opacity: 1; }
+100%{ width: 450px; opacity: 1;}
+}
+
+@-moz-keyframes dialoguee {
+0% { width: 0; opacity:0; }
+30% { opacity: 1; }
+100%{ width: 450px; opacity: 1;}
+}
+
+
+
+/*PROCHAINS DIALOGUES !!!*/
+#dialogue3{/* Conteneur des textes*/
+	position: absolute;
+	top: 6em;
+	z-index: 4;
+	left: 1470em;
+	width: 450px;
+	height: 312px;
+	display: none;
+}
+
+.perso3, .chef, .perso3-1, .chef2, .perso3-2 {
+	position: absolute;
+	width: 540px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 4;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	white-space:nowrap;
+	overflow: hidden;
+	opacity: 0;
+
+}
+
+.perso3{
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1s ease-in-out 1s forwards;
+}
+
+
+.chef{
+	top: 3em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1s ease-in-out 5s forwards;
+}
+
+.perso3-1{
+	top: 6em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1s ease-in-out 7s forwards;
+}
+
+.chef2{
+	top: 14.5em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1s ease-in-out 14s forwards;
+}
+
+.perso3-2{
+	top: 20em;
+	-webkit-animation: dialoguee 2.4s steps(60, end);/* nbre de caracteres et espaces */
+	-moz-animation: dialoguee 5s steps(60, end);
+	animation: dialoguee 1s ease-in-out 18s forwards;
+}
+
+
+.fleche2{
+	position: absolute;
+	top: 20em;
+	left: 65em;
+	width:90px;
+	opacity: 0;
+
+	-webkit-animation: flechee 1s steps(20, end);
+	-moz-animation: flechee 1s steps(20, end);
+	animation: flechee 1s ease-in-out 22s forwards;
+}
+
+/* ANIMATION FLECHE QUI APPARAIT PUIS REBONDIS*/
+@-webkit-keyframes flechee{
+0% { opacity: 0; transform: translateY(0); top: 28em;}
+50% { opacity: 0.3; transform: translateY(0); top: 30em;}
+80% { opacity: 0.5; transform: translateY(0); top: 26em;}
+100%{ opacity: 0.9; transform: translateY(-20px); top: 28em;}
+}
+
+@-moz-keyframes flechee{
+0% { opacity: 0; transform: translateY(0); top: 28em;}
+50% { opacity: 0.3; transform: translateY(0); top: 30em;}
+80% { opacity: 0.5; transform: translateY(0); top: 26em;}
+100%{ opacity: 0.9; transform: translateY(-20px); top: 28em;}
+}
+.encircle {
+  width:80px;
+  height:80px;
+  border-radius:80px;
+  left: 50%;
+  background-color: #4dd309;
+}
+
+.arrow {
+  width: 50px;
+  position: relative;
+  top: 14px;
+  left: 13px;
+  height: 50px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-size: contain;
+  transform: rotate(270deg);
+}

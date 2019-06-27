@@ -1,0 +1,520 @@
+ /*Fond orange semi-opaque qui disparait*/
+ .carre{
+	width: 100%;
+ 	height:100%;
+	margin: auto;
+	position: absolute;
+ 	top: 0px;
+
+ 	background: #ffaf3d;
+ 	z-index: 2;
+	opacity: 0.7;
+	animation: carre 1s ease-in-out 6s forwards;
+	-webkit- animation: carre;
+	-moz-animation: carre;
+}
+
+@keyframes carre {
+0%  { opacity: 0.7; }
+100% { opacity:0; }
+
+}
+
+@-webkit-keyframes carre {
+0%  { opacity: 0.7; }
+100% { opacity:0; }
+
+}
+
+@-moz-keyframes carre {
+0%  { opacity: 0.7; }
+100% { opacity:0; }
+
+}
+
+
+
+/*Planète vieille - vue de loin*/
+#planetevieille{
+	background-image: url("../images/planete.png");
+	background-repeat:no-repeat;
+	background-position:left top;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: static;
+	z-index: 1;
+	position: static;
+	z-index: 1;
+}
+
+ /*Textes récompenses et présentation*/
+/*Voici les 3 parcours, que tu devras réaliser ....*/
+.text{
+	width: 1200px;
+	height: 420px;
+	margin: 330px auto 0px;
+	text-align: center;
+	border: 2px solid transparent;
+	position: relative;
+	z-index: 2;
+}
+
+h1{
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	margin-top: -20px;
+	font-weight: 600;
+	line-height: 39px;
+	opacity: 1;
+	animation: disparition 1s ease-in-out 6s forwards;
+	-webkit- animation: disparition;
+	-moz-animation: disparition;
+}
+
+.text h1{
+	margin: 10px auto 20px;
+}
+
+h2{
+	opacity: 1;
+	animation: disparition 1s ease-in-out 6s forwards;
+	-webkit- animation: disparition;
+	-moz-animation: disparition;
+
+	font-size: 1.3em;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+
+	margin: 100px auto 100px;
+	font-size: 1.6em;
+	line-height: 1.4em;
+}
+
+h3{
+	font-size: 1.3em;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+
+	margin: 5px auto 100px;
+	font-size: 1.6em;
+	line-height: 1.4em;
+	height: auto;
+	animation: disparition 1s ease-in-out 6s forwards;
+	-webkit- animation: disparition;
+	-moz-animation: disparition;
+}
+/*Effet d'apparition*/
+@keyframes disparition {
+0%  { opacity: 1; }
+100% { opacity:0; }
+}
+
+@-webkit-keyframes disparition {
+0%  { opacity: 1; }
+100% { opacity:0; }
+
+}
+
+@-moz-keyframes disparition {
+0%  { opacity: 1; }
+100% { opacity:0; }
+
+}
+
+
+a{
+	text-decoration: none;
+}
+
+/*NIVEAAU 1*/
+#niveau1{
+	background-image: url("../images/niveau1.jpg");
+	background-repeat:no-repeat;
+	background-position:left top;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+/*Lien vers la page suivante*/
+#link{
+	position: absolute;
+	top: 22em;
+	left: 75em;
+
+	width: 240px;
+	height: 240px;
+	filter: opacity(100%);
+	border: 2px solid transparent;
+	z-index: 2;
+}
+
+/*Fleches guidant l'utilisateur pour les niveaux*/
+#flechebas{
+	position: absolute;
+	display: inline;
+	top: 12em;
+	left: 77em;
+	width: 180px;
+	opacity: 0;
+	animation: clignote 1.8s ease-in-out 6.5s forwards infinite;
+}
+
+/* ANIMATION CLIGNOTEMENT des Flèches*/
+@keyframes clignote{
+0%   { opacity: 0; top: 12em; }
+100% { opacity: 1; top: 15em; } 
+
+}
+
+@-webkit-keyframes clignote {
+0%  { opacity: 0; top: 12em; }
+100% { opacity:1; top: 15em; }
+
+}
+
+@-moz-keyframes clignote {
+0%  { opacity: 0; top: 12em; }
+100% { opacity:1; t: 15em; }}
+
+}
+
+#flechebas img{
+	width: 60px;
+	padding-left: 20px;
+}
+
+/* Mot en boldd*/
+b{
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+
+
+/*NIVEAAU 2*/
+#niveau2{
+	background-image: url("../images/niveau2.jpg");
+	background-repeat:no-repeat;
+	background-position:left top;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+/*Fleches guidant l'utilisateur pour les niveaux*/
+#flechebas2{
+	position: absolute;
+	display: inline;
+	top: 32em;
+	left: 32em;
+	width: 180px;
+	opacity: 0;
+	animation: clignotee 1.8s ease-in-out 6.5s forwards infinite;
+	-webkit- animation: clignotee;
+	-moz-animation: clignotee;
+}
+
+#flechebas2 img{
+	width: 60px;
+	padding-left: 20px;
+}
+
+
+/* ANIMATION CLIGNOTEMENT des Flèches*/
+@keyframes clignotee{
+0%   { opacity: 0; top: 28em; }
+100% { opacity: 1; top: 32em; } 
+
+}
+
+@-webkit-keyframes clignotee {
+0%  { opacity: 0; }
+100% { opacity: 1; }
+
+}
+
+@-moz-keyframes clignotee {
+0%  { opacity: 0; top: 28em; }
+100% { opacity: 1; top: 32em; }
+
+}
+
+/*Lien vers la page suivante*/
+#link2{
+	position: absolute;
+	top: 40em;
+	left: 30em;
+
+	width: 280px;
+	height: 240px;
+	filter: opacity(100%);
+	border: 2px solid transparent;
+	z-index: 2;
+}
+
+
+
+/*NIVEAAU 3*/
+#niveau3{
+	background-image: url("../images/niveau3.jpg");
+	background-repeat:no-repeat;
+	background-position:left top;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+/*Fleches guidant l'utilisateur pour les niveaux*/
+#flechebas3{
+	position: absolute;
+	display: inline;
+	top: 8em;
+	left: 38em;
+	width: 180px;
+	opacity: 0;
+	animation: clignoteee 1.8s ease-in-out 6.5s forwards infinite;
+	-webkit- animation: clignoteee;
+	-moz-animation: clignoteee;
+}
+
+#flechebas3 img{
+	margin-left: 20px;
+}
+
+
+/* ANIMATION CLIGNOTEMENT des Flèches*/
+@keyframes clignoteee{
+0%   { opacity: 0; top: 8em; }
+100% { opacity: 1; top: 12em; } 
+
+}
+
+@-webkit-keyframes clignoteee{
+0%   { opacity: 0; top: 8em; }
+100% { opacity: 1; top: 12em; } 
+
+}
+
+@-moz-keyframes clignoteee{
+0%   { opacity: 0; top: 8em; }
+100% { opacity: 1; top: 12em; } 
+
+}
+
+/*Lien vers la page suivante*/
+#link3{
+	position: absolute;
+	top: 18em;
+	left: 36em;
+
+	width: 280px;
+	height: 240px;
+	filter: opacity(100%);
+	border: 2px solid transparent;
+	z-index: 2;
+}
+
+
+
+/*PLANETE DEBLOQUEE */
+#debloque{
+	background-image: url("../images/debloquee.jpg");
+	background-repeat:no-repeat;
+	background-position:left top;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: static;
+	z-index: 1;
+}
+
+/*Lien vers la page suivante*/
+#link4{
+	position: absolute;
+	top: 31em;
+	left: 51em;
+	width: 280px;
+	height: 240px;
+	filter: opacity(100%);
+	border: 2px solid transparent;
+	z-index: 2;
+}
+
+/*Fleches guidant l'utilisateur pour les niveaux*/
+#flechebas4{
+	position: absolute;
+	display: inline;
+	top: 25em;
+	left: 54em;
+	width: 180px;
+	opacity: 0;
+	animation: clignotequatre 1.8s ease-in-out 6.5s forwards infinite;
+	-webkit- animation: clignotequatre;
+	-moz-animation: clignotequatre;
+}
+
+#flechebas4 img{
+	width: 60px;
+	padding-left: 20px;
+}
+
+/* ANIMATION CLIGNOTEMENT des Flèches*/
+@keyframes clignotequatre{
+0%   { opacity: 0; top: 23em; }
+100% { opacity: 1; top: 27em; } 
+
+}
+
+
+
+/*PAGE DE FIN*/
+#finish{
+	background-image: url("../images/planetenew.gif");
+	background-repeat:no-repeat;
+	background-position:left top;
+	overflow-y: scroll;
+	z-index: 1;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* Animation*/
+@keyframes jump { 
+	0% { top: 53em; opacity: 0 } 
+	50% { top: 55em; opacity: 1;}
+	100% { top: 53em; opacity: 0;} 
+
+}
+
+/* Bouton pour scroller*/
+#scrolldown { 
+	position: absolute;
+	top: 55em;
+	left: 58em;
+	animation: jump 3s infinite 7.5s forwards;
+	z-index: 3;
+	opacity: 0;
+
+}
+
+
+i { 
+	content: '\f0a8'; 
+}
+  
+i:hover { 
+	color: #FFAAAA; 
+}
+
+#fondrejouer{
+	background-color: #ffd933;
+	background-repeat:no-repeat;
+	width: auto;
+	height: 1050px;
+	position: relative;
+	top: 20.4em;
+	z-index: 1;
+}
+
+#conteneur{
+	width: 1200px;
+	margin: 200px auto 0px;
+	border: 2px solid transparent;
+	height: 700px;
+	position: absolute;
+	top: 64em;
+	margin-left: 20em;
+	z-index: 2;
+}
+
+#iconrejouer{
+	width: 100px;
+	position: relative;
+	top: 5em;
+	left: 25em;
+}
+
+#liensparcours img{
+	padding-left: 7em;
+}
+
+#liensparcours{
+	position: relative;
+	top: 11em;
+	left: 5em;
+	opacity: 0;
+	-webkit-animation: apparitionparcours 1s steps(50, end);
+    -moz-animation: apparitionparcours 1s steps(50, end);
+    animation: apparitionparcours 1s ease-in-out 2.5s forwards;
+}
+
+/* ANIMATION APPARITION*/
+@-webkit-keyframes apparitionparcours{
+0% {opacity: 0;}
+100% {opacity: 1;};
+}
+
+@-moz-keyframes apparitionparcours{
+0% {opacity: 0;}
+100% {opacity: 1};
+}
+
+.parcours{
+	text-decoration: none;
+	opacity: 1;
+	transition: 0.5s all;
+}
+
+.parcours:hover{
+	opacity: 0.7;
+}
+
+
+#conteneurinfos{
+	width: 1900px;
+	position: absolute;
+	top: 127em;
+	height: 20px;
+	margin: 2.3em auto;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	opacity: 0;
+	z-index: 3;
+
+	-webkit-animation: apparitionparcours 1s steps(50, end);
+    -moz-animation: apparitionparcours 1s steps(50, end);
+    animation: apparitionparcours 1s ease-in-out 4s forwards;
+}
+
+.infos{
+	position: absolute;
+	left: 7em;
+}
+
+.infos2{
+	position: absolute;
+	left: 105em;
+	white-space: nowrap;
+}
+
+.logoinsta{
+	position: absolute;
+	left: 4em;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
